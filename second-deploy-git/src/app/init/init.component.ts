@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {MatButton} from "@angular/material/button";
+import {routes} from "../app.routes";
 
 @Component({
   selector: 'app-init',
   standalone: true,
-  imports: [],
+  imports: [
+    MatButton
+  ],
   templateUrl: './init.component.html',
   styleUrl: './init.component.scss'
 })
@@ -15,7 +19,7 @@ export class InitComponent {
   }
 
 
-   GetRoute(){
-    return `${window.location.origin}/shibas`
+  async ClickShibas(){
+    await this.router.navigate(['/shibas']);
    };
 }
