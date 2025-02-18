@@ -12,6 +12,6 @@ import {InitComponent} from "./init/init.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-
+ title: string = '';
 
 }
